@@ -25,7 +25,11 @@ const Get = () => {
         //     .then(res => setData(res))
         //     .catch(err => console.log(err));
         // * SHORTER VERSION - SHORTING PARAMS - BEST PRACTICE
-        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+        // axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5")
+        // after 5ms stop
+        // axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5", { timeout: 5 })
+        // after 5s stop
+        axios.get("https://jsonplaceholder.typicode.com/todos?_limit=5", { timeout: 5000 })
             .then(res => setData(res))
             .catch(err => console.log(err));
         // * DEFAULT - Without GET

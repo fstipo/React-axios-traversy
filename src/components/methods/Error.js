@@ -9,7 +9,13 @@ const Error = () => {
     const [errorObj, setErrorObj] = useState({});
 
     const errorHandling = () => {
-        axios.get("https://jsonplaceholder.typicode.com/todoss")
+        axios.get("https://jsonplaceholder.typicode.com/todoss", {
+            // Reject only when is error >=500
+            validateStatus: function (status) {
+                return status <
+                    500
+            }
+        })
             .then(res => setData(res))
             .catch(err => {
                 if (err.response) {
