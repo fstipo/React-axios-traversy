@@ -15,6 +15,7 @@ const Links = () => {
                 <Link to="transform" className='btn btn-secondary fw-bold'>Transform</Link>
                 <Link to="error" className='btn btn-secondary fw-bold'>Error Handling</Link>
                 <Link to="cancel" className='btn btn-secondary fw-bold'>Cancel</Link>
+                <Link to="instance" className='btn btn-secondary fw-bold'>Axios instance</Link>
             </div>
             <div className='border-bottom mt-5'></div>
         </>

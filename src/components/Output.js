@@ -10,6 +10,7 @@ import Transform from './methods/Transform'
 import Error from './methods/Error'
 import Cancel from './methods/Cancel'
 import NoPage from './methods/NoPage'
+import AxiosInstance from './methods/AxiosInstance'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 
@@ -28,6 +29,7 @@ const Output = () => {
                     <Route path='/transform' element={<Transform />} />
                     <Route path='/error' element={<Error />} />
                     <Route path='/cancel' element={<Cancel />} />
+                    <Route path='/instance' element={<AxiosInstance />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
